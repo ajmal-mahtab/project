@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Practice Project</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+        color: rgb(29, 29, 29);
+        /* background-color: #e6115b;
+        color: #ce0048;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.315);
+        color: #ff97bb; */
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 550px;
+        grid-template-rows: 70px 1fr;
+        height: 100vh;
+      }
+
+      nav {
+        background-color: #e6115b;
+        grid-column: 1/-1;
+      }
+
+      .author div {
+        margin: 60px 150px 0px 0px;
+        box-shadow: 0px 5px 20px rgba(71, 71, 71, 0.1);
+        padding: 20px 40px;
+      }
+
+      .author-text {
+        font-size: 18px;
+        margin-bottom: 14px;
+      }
+
+      .author-greet {
+        font-size: 32px;
+        margin-bottom: 18px;
+        color: #e6115b;
+      }
+
+      .logo-container p {
+        color: white;
+        font-weight: bold;
+        letter-spacing: 3px;
+        font-size: 32px;
+        margin: 10px 150px;
+        cursor: pointer;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-container div {
+        margin-right: 150px;
+        margin-left: auto;
+        color: white;
+        letter-spacing: 2px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .link-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 60px;
+        margin-left: 150px;
+        margin-right: 100px;
+      }
+
+      a:link,
+      a:visited {
+        display: block;
+        text-decoration: none;
+        padding: 8px 24px;
+        border: 2px solid #e6115b;
+        font-size: 24px;
+        letter-spacing: 1.5px;
+      }
+
+      a:hover,
+      a:active {
+        color: white;
+        background-color: #e6115b;
+      }
+
+      a {
+        color: #e6115b;
+      }
+
+      .author-name {
+        color: #ff82ae;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo-container">
+          <p title="I don't have any logo">LOGO</p>
+          <div title="It doesn't work">NAVIGATION</div>
+        </div>
+      </nav>
+      <section class="projects">
+        <div class="link-container">
+          <a href="other/leap year.html" title="click me">Leap year</a>
+          <a href="other/temp.html" title="click me">Temperature converter</a>
+          <a href="other/counter.html" title="click me">Counter</a>
+          <a href="other/number guessing game.html" title="click me"
+            >Number guessing game</a
+          >
+          <a href="other/area of circle.html" title="click me"
+            >Area of circle</a
+          >
+          <a href="other/Hypotenuse.html" title="click me"
+            >Hypotenuse calculator</a
+          >
+        </div>
+      </section>
+      <section class="author">
+        <div>
+          <p class="author-greet">Hello there</p>
+          <p class="author-text">
+            I have created some basic program for practicing HTML, CSS and
+            JavaScript. I want you to try them out and tell me what you think
+            about them. I am still learning, so if you find any mistake feel
+            free to let me know.
+          </p>
+          <p class="author-text">
+            Also if you have any personal preferences about the design or the
+            layout then you can tell me. This programmes are rather useless but
+            as I am learning new things I wanted to try them out.
+          </p>
+          <p class="author-name" title="Author name">-Ajmal Mahtab</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
