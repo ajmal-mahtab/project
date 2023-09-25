@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Temperature Converter</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        color: rgb(29, 29, 29);
+      }
+
+      .container {
+        width: 400px;
+        box-shadow: 0px 5px 20px rgba(71, 71, 71, 0.1);
+        margin: 100px auto 0 auto;
+        padding: 12px 30px;
+      }
+
+      .btn-container {
+        width: 400px;
+        margin: 0px auto 0 auto;
+      }
+
+      .enter {
+        font-size: 20px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+
+      .temp-input {
+        border: 1px solid #e6115b;
+        height: 24px;
+        margin-right: 12px;
+        margin-bottom: 12px;
+      }
+
+      .author {
+        width: 400px;
+        box-shadow: 0px 5px 20px rgba(71, 71, 71, 0.1);
+        margin: 50px auto 40px auto;
+        padding: 16px 24px;
+        font-size: 18px;
+        background-color: #e6115b;
+      }
+
+      .author-text {
+        font-size: 16px;
+        color: white;
+        line-height: 1.5;
+      }
+
+      .p-author {
+        font-size: 14px;
+        color: #ff97bb;
+        margin-top: 12px;
+      }
+
+      button,
+      button:visited {
+        background-color: #e6115b;
+        color: white;
+        border: none;
+        padding: 6px 18px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      button:hover,
+      button:active {
+        background-color: #ce0048;
+      }
+
+      .result {
+        font-size: 18px;
+      }
+
+      .c-cont {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .f-cont {
+        display: flex;
+        gap: 12px;
+        margin: 12px 0;
+      }
+
+      .btn-icon {
+        height: 20px;
+        width: 20px;
+        fill: #e6115b;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      .back,
+      .back:visited {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        color: #e6115b;
+        background: none;
+        padding: 0;
+      }
+
+      .back:hover,
+      .back :active {
+        color: #ce0048;
+        background: none;
+      }
+
+      .a-cont {
+        width: 400px;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        document.querySelector(".submit").onclick = function () {
+          let temp;
+
+          if (document.querySelector(".c").checked) {
+            temp = document.querySelector(".temp-input").value;
+            temp = Number(temp);
+            temp = (5 / 9) * (temp - 32);
+            temp = temp.toFixed(2);
+            document.querySelector(
+              ".result"
+            ).innerText = `The temperature is: ${temp}°C`;
+          } else if (document.querySelector(".f").checked) {
+            temp = document.querySelector(".temp-input").value;
+            temp = Number(temp);
+            temp = (9 / 5) * temp + 32;
+            temp = temp.toFixed(2);
+            document.querySelector(
+              ".result"
+            ).innerText = `The temperature is: ${temp}°F`;
+          } else {
+            document.querySelector(
+              ".result"
+            ).innerText = `Please select a method`;
+          }
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <p class="enter">Enter temperature</p>
+      <input type="text" class="temp-input" />
+      <button class="submit">SUBMIT</button>
+      <div class="c-cont">
+        <input type="radio" name="temp" class="c" />
+        <p>Celcius</p>
+      </div>
+      <div class="f-cont">
+        <input type="radio" name="temp" class="f" />
+        <p>Fahrenheit</p>
+      </div>
+      <p class="result">The temperature is:</p>
+    </div>
+    <div class="author">
+      <p class="author-text">
+        This program convert temperature. Celcius to Fahrenheit or Fahrenheit to
+        celcius. Just input a number and select a convert method then click
+        submit button.
+      </p>
+      <p class="p-author">-Ajmal mahtab</p>
+    </div>
+
+    <a href="../index.html">
+      <div class="btn-container">
+        <button class="back">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="btn-icon"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Go Back
+        </button>
+      </div>
+    </a>
+  </body>
+</html>
